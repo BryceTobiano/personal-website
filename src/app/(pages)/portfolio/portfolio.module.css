@@ -1,0 +1,20 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 20px 15vw;
+  gap: 64px;
+  font-family: var(--font-geist-mono);
+  min-height: 90svh;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 5em;
+}
+
+  
