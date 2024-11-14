@@ -18,13 +18,21 @@ export default function Home() {
         </div>
 
         <div className={styles.ctas}>
-          <Link 
+          {/* <Link 
             href="/portfolio" 
             rel="noopener noreferrer"
             className={styles.primary}
           >
             <StarFilledIcon/>
             <span>Portfolio</span>
+          </Link> */}
+          <Link 
+            href="/BryceTobianoResume.pdf" 
+            rel="noopener noreferrer"
+            className={styles.primary}
+          >
+            <StarFilledIcon/>
+            <span>Resume</span>
           </Link>
           <Link 
             href="https://www.linkedin.com/in/brycetobiano" 
