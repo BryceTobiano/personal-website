@@ -27,6 +27,14 @@ export default function Home() {
             <span>Portfolio</span>
           </Link> */}
           <Link 
+            href="/BryceTobianoResume.pdf" 
+            rel="noopener noreferrer"
+            className={styles.primary}
+          >
+            <StarFilledIcon/>
+            <span>Resume</span>
+          </Link>
+          <Link 
             href="https://www.linkedin.com/in/brycetobiano" 
             target="_blank" 
             rel="noopener noreferrer"
