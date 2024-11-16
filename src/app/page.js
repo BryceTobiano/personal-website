@@ -35,7 +35,7 @@ export default function Home() {
             <span>Resume</span>
           </Link>
           <Link 
-            href="https://www.linkedin.com/in/brycetobiano" 
+            href="https://www.linkedin.com/in/bryce-tobiano" 
             target="_blank" 
             rel="noopener noreferrer"
             className={styles.secondary}
