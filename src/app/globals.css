@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 
@@ -7,9 +7,9 @@
 
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) { */
   :root {
     --background: #212020;
     --foreground: #ededed;
@@ -17,14 +17,14 @@
     --accent: #619D97;
     --accent-hover: #619d9780;
     
-    --light-gray: #555555;
+    --light-gray: #313030;
     --gray: #1b1919;
   }
   
   html {
     color-scheme: dark;
   }
-}
+/* } */
 
 
 /* HTML ELEMENTS */
@@ -73,4 +73,9 @@ nav {
   font-family: var(--font-geist-mono);
   font-size: 1em;
   line-height: 24px;
+}
+
+.bold-uline {
+  text-decoration: underline;
+  font-weight: 900;
 }

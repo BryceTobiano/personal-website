@@ -1,5 +1,4 @@
 import styles from "./portfolio.module.css";
-import NavBar from "@/app/(components)/nav";
 import Card from "@/app/(components)/card";
 
 export const metadata = {
@@ -10,17 +9,35 @@ export const metadata = {
 export default function Portfolio() {
   return (
     <>
-    <NavBar />
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <p className="title">PORTFOLIO</p>
+      <div className={styles.titleContainer}>
+        <p className={styles.titleText}>PORTFOLIO</p>
+        <p> A list of things I have done or am currently working on</p>
+      </div>
+      
+      <Card 
+        title="A FULLY CUSTOM SYSTOLIC ARRAY LAYOUT" 
+        link="/portfolio/systolic-array"
+        description={
+          <>
+            Creating a <b>full custom layout design</b> for a systolic array, a unit
+            handling high computational demands in tasks like deep learning and
+            matrix multiplication. 
+            Optimizing for area, power consumption, and
+            computational delay.
+          </>
+        }
+      />
+      <Card 
+        title="RUNNING A CONVOLUTIONAL NEURAL NETWORK ON AN FPGA" 
+        link="/portfolio/CNN-on-FPGA"
+        description="Training and testing a neural network to identify handwritten digits using the MNIST dataset. Utilizing features such as RS232 communication "
         
-        <Card 
-          title="Firing Frenzy" 
-          description="building a fun little game with an FPGA"
-        />
-      </main>
-    </div>
+      />
+      <Card 
+        title="FIRING FRENZY" 
+        link="/portfolio/firing-frenzy"
+        description="Building a fun shooter game on FPGA"
+      />
     </>
   );
 }

@@ -3,6 +3,10 @@
     font-size: 1.5em;
 }
   
+.nav {
+    border-bottom: 5px solid #3D3C3C;
+}
+
 .links {
     display: flex;
     align-items: center;
