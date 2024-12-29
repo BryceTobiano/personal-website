@@ -15,7 +15,7 @@ export default function Portfolio() {
       </div>
       
       <Card 
-        title="SYSTOLIC ARRAY LAYOUT" 
+        title="A FULLY CUSTOM SYSTOLIC ARRAY LAYOUT" 
         link="/portfolio/systolic-array"
         description={
           <>
@@ -28,8 +28,8 @@ export default function Portfolio() {
         }
       />
       <Card 
-        title="NEURAL NETWORKS ON AN FPGA" 
-        link="/portfolio/NN-FPGA"
+        title="RUNNING A CONVOLUTIONAL NEURAL NETWORK ON AN FPGA" 
+        link="/portfolio/CNN-on-FPGA"
         description="Training and testing a neural network to identify handwritten digits using the MNIST dataset. Utilizing features such as RS232 communication "
         
       />

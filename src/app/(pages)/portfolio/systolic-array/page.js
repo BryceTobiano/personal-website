@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export const metadata = {
   title: 'Bryce Tobiano | Systolic Arrays',
-  description: 'Some things I have done!'
+  description: 'The process of designing a custom layout for a systolic array!'
 };
 
 export default function SystolicArray() {
@@ -87,52 +87,56 @@ export default function SystolicArray() {
 
         </div>
 
+        <div>
+          <h2 className={styles.heading}>Results</h2>
+          <p>It works! We are able to multiply any pair of 4x4 matrices. A sample waveform was depicted below. </p>
+          <Image
+            src="/systolic-array/results-477.png"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            alt="Graphed Results for he systolic array" 
+          />
+          <p>
+            How was our performance? Well, not great. Utilizing a spectre SPICE simulation, our multiplication finishes when the operating frequency is slowed down to 125MHz and our clock period to 8ns. On top of this, our layout area was 120um x 120um and power consumption was about 30uW. 
+            <br/>For reference, the top echelon of the class was achieving about a 70um x 70um area with 20uW of power consumption and a 1.7ns clock period (yikes! 😬) .
+          </p>
+        </div>
 
-        <h2 className={styles.heading}>Results</h2>
-        <p>It works! We are able to multiply any pair of 4x4 matrices. A sample waveform was depicted below. </p>
-        <Image
-          src="/systolic-array/results-477.png"
-          width={0}
-          height={0}
-          sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
-          alt="Graphed Results for he systolic array" 
-        />
-        <p>
-          How was our performance? Well, not great. Utilizing a spectre SPICE simulation, our multiplication finishes when the operating frequency is slowed down to 125MHz and our clock period to 8ns. On top of this, our layout area was 120um x 120um and power consumption was about 30uW. 
-          <br/>For reference, the top echelon of the class was achieving about a 70um x 70um area with 20uW of power consumption and a 1.7ns clock period (yikes! 😬) .
-        </p>
+        <div>
+          <h2 className={styles.heading}>Takeaways</h2>
+          <ul>
+            <li>
+              Using a minimum size cell is often good enough for performance.
+            </li>    
+              <ul>
+                <li style={{marginLeft: "20px"}}>Cadence, if you need someone to create documentation for you, my email is in my resume on the top right corner.</li>
+              </ul>      
+            <li>
+              Cadence has a lot of tools and not enough documentation.
+            </li> 
+            <li>
+              Wire length contributes more to delay than using more layers/vias.
+            </li>
+              <ul>
+                <li style={{marginLeft: "20px"}}>I feel the best analogy to this is that it is similar to why 4-layer PCBs are standard over something like 2-layer PCBs. 4-layer PCBs provide a good balance between design complexity/cost, signal integrity, and delay. Unsurprisingly, this applies to VLSI circuits as well. Being unashamed to use another layer to shorten a long global wire proved to help the delay.</li>
+              </ul> 
+          </ul>
+        </div>
 
-        <h2 className={styles.heading}>Takeaways</h2>
-
-        <ul>
-          <li>
-            Using a minimum size cell is often good enough for performance.
-          </li>    
-            <ul>
-              <li style={{marginLeft: "20px"}}>Cadence, if you need someone to create documentation for you, my email is in my resume on the top right corner.</li>
-            </ul>      
-          <li>
-            Cadence has a lot of tools and not enough documentation.
-          </li> 
-          <li>
-            Wire length contributes more to delay than using more layers/vias.
-          </li>
-            <ul>
-              <li style={{marginLeft: "20px"}}>I feel the best analogy to this is that it is similar to why 4-layer PCBs are standard over something like 2-layer PCBs. 4-layer PCBs provide a good balance between design complexity/cost, signal integrity, and delay. Unsurprisingly, this applies to VLSI circuits as well. Being unashamed to use another layer to shorten a long global wire proved to help the delay.</li>
-            </ul> 
-        </ul>
-
-        <h2 className={styles.heading}>Future Work</h2>
-        <p>It&apos;s known that semi-custom and/or gate arrays create a faster time to market but at the cost of performance. I want to put this to the test: </p>
-        <ul>
-          <li>
-          Over the course of my short winter break, rather than attempting to redesign a fully custom systolic array, I will utilize libraries of premade components and auto place and route tools to redesign a systolic array and compare its PAD (Power*Delay*Area) score to than the top designs of the class.
-          </li> 
-          <li>
-            Stay tuned for a future update!
-          </li>
-        </ul>
+        <div>
+          <h2 className={styles.heading}>Future Work</h2>
+          <p>It&apos;s known that semi-custom and/or gate arrays create a faster time to market but at the cost of performance. I want to put this to the test: </p>
+          <ul>
+            <li>
+            Over the course of my short winter break, rather than attempting to redesign a fully custom systolic array, I will utilize libraries of premade components and auto place and route tools to redesign a systolic array and compare its PAD (Power*Delay*Area) score to than the top designs of the class.
+            </li> 
+            <li>
+              Stay tuned for a future update!
+            </li>
+          </ul>
+        </div>
     </>
   );
 }
