@@ -6,6 +6,7 @@
   padding: 20px 15vw;
   gap: 64px;
   font-family: var(--font-geist-mono);
+  font-weight: 600;
   min-height: 90svh;
 }
 
@@ -15,6 +16,18 @@
   flex-direction: column;
   gap: 32px;
   padding-top: 5em;
+  line-height: 1.75em;
 }
 
-  
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleText {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 3em;
+}

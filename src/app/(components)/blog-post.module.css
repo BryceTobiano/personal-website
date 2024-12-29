@@ -1,0 +1,21 @@
+.title {
+    font-family: var(--font-geist-mono);
+    font-weight: 900;
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.heading {
+    font-weight: 900;
+}
+
+.block {
+    border-left: 7px solid var(--accent);
+    background: var(--light-gray);
+    padding: 1em 1em 1em 2em;
+}
+
+.block li {
+    margin-top: 10px;
+}
+

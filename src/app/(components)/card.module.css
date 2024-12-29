@@ -1,20 +1,18 @@
 .card {
     display: flex;
-    background-color: #403e3e;
+    background-color: #404040;
     padding: 2.5em;
     border-radius: 10px;
-    --box-shadow-color: var(--gray);
-    box-shadow: 5px 5px 5px var(--box-shadow-color);
+    box-shadow: 5px 5px 5px var(--gray);
     gap: 2em;
 
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
     cursor: pointer;
 
 }
 
 .card:hover {
-    transform: scale(1.02);
-    --box-shadow-color: var(--light-gray);
+    transform: scale(1.01);
 }
 
 .img {
@@ -25,6 +23,7 @@
 }
 
 .title {
+    /* font-family: Inter; */
     font-family: var(--font-geist-mono);
     font-weight: 900;
     font-size: 2em;
