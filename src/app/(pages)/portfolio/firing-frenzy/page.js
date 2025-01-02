@@ -44,7 +44,7 @@ export default function FiringFrenzy() {
         </div>
         
         <div>
-          <h2 className={styles.heading}>Components</h2>
+          <h2 className={styles.heading}>Main technologies:</h2>
 
           <ul>
             <li>
@@ -100,7 +100,7 @@ export default function FiringFrenzy() {
               Implement multiple targets to shoot at once.
             </li>
             <li>
-              Note: I'm considering reimplementing the game in the Altera FPGA I recently obtained (Stay tuned to hear more about it!).
+              Note: I&apos;m considering reimplementing the game in the Altera FPGA I recently obtained (Stay tuned to hear more about it!).
             </li>
           </ul>
         </div>
