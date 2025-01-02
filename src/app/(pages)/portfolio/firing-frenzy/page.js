@@ -1,6 +1,6 @@
 
 import styles from "@/app/(components)/blog-post.module.css";
-import Image from "next/image"
+import Link from "next/link";
 
 export const metadata = {
   title: 'Bryce Tobiano | Systolic Arrays',
@@ -18,7 +18,7 @@ export default function FiringFrenzy() {
           <h2 className={styles.heading}>The Full Report</h2>
           <ul>
             <li>
-              For the full detailed report, check out my lab partner&apos;s post by clicking here.
+              For the full detailed report, check out my lab partner&apos;s post by <Link href="https://annahsu.dev/blog/firing-frenzy/">clicking here.</Link>
             </li>
             <li>
               This post will be a covering my personal experience and thoughts working on the project.
@@ -65,7 +65,7 @@ export default function FiringFrenzy() {
           </ul>
           <ol>
             <li>
-              1. React and Verilog are both modular 
+              React and Verilog are both modular 
             </li>   
               <ul>
                 <li style={{marginLeft: "20px"}}>
@@ -73,7 +73,7 @@ export default function FiringFrenzy() {
                 </li>
               </ul>      
             <li>
-              2. React and Verilog update in real time 
+              React and Verilog update in real time 
             </li>
               <ul>
                 <li style={{marginLeft: "20px"}}>
