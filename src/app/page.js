@@ -8,12 +8,12 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <div>
-          <p className="title">BRYCE<br></br>TOBIANO</p>
+          <p className={styles.title}>BRYCE<br></br>TOBIANO</p>
         </div>
         
-        <div className="p-text">
+        <div className={styles.ptext}>
           Hi! My name is Bryce. 
-          <p>I&apos;m tinkerer and engineer with interests in Embedded Software, Web Development, and more. 
+          <p>I&apos;m a tinkerer and engineer with interests in Embedded Software, Web Development, and more. 
           Currently, I am at <b className={styles.uline}>USC</b> ✌️ studying <b className={styles.uline}>Computer Engineering and Computer Science (CECS)</b>.</p>
           <p>
             When I&apos;m not working you can find me cooking, practicing for the&nbsp;
@@ -27,7 +27,6 @@ export default function Home() {
         </div>
 
         <div className={styles.ctas}>
-          
           <Link 
             href="/BryceTobianoResume.pdf" 
             rel="noopener noreferrer"
@@ -62,6 +61,7 @@ export default function Home() {
             <GitHubLogoIcon/>
             <span>Github</span>
           </Link>
+
 
         </div>
       </main>

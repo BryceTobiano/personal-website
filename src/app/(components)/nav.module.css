@@ -17,3 +17,79 @@
 .links a:hover {
     text-decoration: underline;
 }
+
+.menuIcon{
+    display: none;
+}
+
+
+
+@media (max-width: 600px) {
+    .links {
+        display: none;
+    }
+
+    .menuIcon {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+    }
+
+    .iconWrapper {
+        position: relative;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+    }
+    
+    .hamburgerIcon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    
+    /* Cross Icon */
+    .crossIcon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+
+    /* When menu is open, swap icons */
+    [data-active] .hamburgerIcon {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    
+    [data-active] .crossIcon {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    .menuItems {
+        display: flex;
+        flex-direction: column;
+        background-color: #3D3C3C;
+        border-radius: 5px;
+        padding: 1em;
+        gap: 1em;
+    }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .menuIcon:hover {
+        cursor: pointer;
+    }
+}
+
+.menuIcon:focus  {
+    outline: none;
+}

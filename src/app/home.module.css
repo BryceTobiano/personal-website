@@ -23,6 +23,12 @@
   line-height: 80%;
 }
 
+.ptext {
+  font-family: var(--font-geist-mono);
+  font-size: 1em;
+  line-height: 24px;
+}
+
 .bio {
   font-family: var(--font-geist-mono);
   font-size: 14px;
@@ -95,11 +101,6 @@ a.secondary {
     background: var(--accent-hover);
     border-color: transparent;
   }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
 }
 
 /* Mobile View Queries */
@@ -117,8 +118,13 @@ a.secondary {
     text-align: center;
   }
 
-  .ctas {
-    flex-direction: column;
+  .title {
+    text-align: center;
+  }
+
+  .ctas{
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   .ctas a {
@@ -135,11 +141,5 @@ a.secondary {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
   }
 }
