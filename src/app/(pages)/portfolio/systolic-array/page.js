@@ -1,4 +1,4 @@
-import styles from "@/app/(components)/blog-post.module.css";
+import styles from "@/app/(components)/templates/blog-post/blog-post.module.css";
 import Image from "next/image"
 
 export const metadata = {

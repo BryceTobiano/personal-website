@@ -1,5 +1,4 @@
 import NavBar from "@/app/(components)/Nav/nav";
-import styles from "./portfolio.module.css";
 
 export const metadata = {
   title: "Bryce Tobiano | Home" ,
@@ -10,8 +9,8 @@ export default function PortfolioLayout({ children }) {
   return (
     <>
         <NavBar />
-        <div className={styles.page}>
-            <main className={styles.main}>
+        <div className="page">
+            <main className="main">
                 {children}
             </main>
         </div>

@@ -1,0 +1,24 @@
+.app {
+    display: flex;
+    flex-direction: row;
+}
+
+.suika_container {
+    min-width: 33vw;
+}
+
+.section_container {
+    min-width: 33vw;
+}
+
+
+
+@media (max-width: 650px) {
+    .suika_container {
+        min-width: 100vw;
+    }
+    
+    .section_container {
+        display:none;
+    }
+}

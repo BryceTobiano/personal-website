@@ -1,0 +1,59 @@
+.card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: auto;
+    background-color: #404040;
+    padding: 2.5em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--gray);
+    gap: 2em;
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.descriptionText {
+    margin-top: 1em;
+    line-height: 1.25em;
+}
+
+
+
+.info {
+    min-width: 65%;
+}
+
+.img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px;
+    background-color: #6c6666;
+}
+
+/* For centering Images */
+.imgWrapper {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 650px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .img {
+        display: none;
+    }
+
+    .info {
+        min-width: 100%;
+    }
+}
