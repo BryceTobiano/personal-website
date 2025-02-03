@@ -24,7 +24,7 @@
 }
 
 .bio {
-  font-family: var(--font-geist-mono);
+  font-family: var(--font-geist-mono), 'Courier New', Courier, monospace;;
   font-size: 14px;
   line-height: 24px;
   /* letter-spacing: -0.01em; */

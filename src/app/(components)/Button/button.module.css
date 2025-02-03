@@ -1,4 +1,5 @@
 .button {
+    font-family: var(--font-geist-mono), 'Courier New', Courier, monospace;;
     appearance: none;
     border-radius: 128px;
     height: 48px;
@@ -19,14 +20,15 @@
     gap: 5px;
 }
 
-a.primary {
+.primary {
     background: var(--foreground);
     color: var(--background);
     gap: 8px;
     text-decoration: none;
 }
 
-a.secondary {
+.secondary {
+    background: var(--background);
     border-color: var(--accent-200);
     color: var(--accent);
     text-decoration: none;
@@ -34,18 +36,18 @@ a.secondary {
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-    a.primary:hover {
+    .primary:hover {
         background: var(--accent-hover);
         border-color: transparent;
     }
 
-    a.secondary:hover {
+    .secondary:hover {
         /* background: var(--button-secondary-hover); */
         background: var(--accent-hover);
         border-color: transparent;
     }
 
-    .footer a:hover {
+    .footer :hover {
         text-decoration: underline;
         text-underline-offset: 4px;
     }

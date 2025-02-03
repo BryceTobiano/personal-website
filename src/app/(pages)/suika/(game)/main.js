@@ -10,13 +10,12 @@ import { Preloader } from './(scenes)/Preloader';
 const config = {
     type: Phaser.AUTO,
     parent: '.suika-container',
-    backgroundColor: '#028af8',
+    backgroundColor: '#ededed',
     scale: {
-        mode: Phaser.Scale.WIDTH_CONTROLS_HEIGHT, // Scale the game to fit the screen
+        mode: Phaser.Scale.FIT, // Scale the game to fit the screen
         width: 1080,
         height: 1920, 
-        // zoom: 0.35,
-        autoCenter: Phaser.Scale.CENTER_HORIZONTALLY, // Center the game in the screen
+        autoCenter: Phaser.Scale.CENTER_BOTH, // Center the game in the screen
     },
     scene: [
         Boot,
@@ -29,8 +28,8 @@ const config = {
         default: 'matter',
         matter: {
             debug: {
-                showBody: true,
-                showStaticBody: true
+                showBody: false,
+                showStaticBody: false
             }
         }
     }

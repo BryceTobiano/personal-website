@@ -1,9 +1,10 @@
 "use client"
 import { useRef, useState } from 'react';
 import styles from "./suika.module.css";
-import Button from "@/app/(components)/ButtonLink/buttonlink"
-import Title from "@/app/(components)/Texts/title"
-
+import Button from "@/app/(components)/Button/button"
+import Heading1 from '@/app/(components)/Texts/heading1';
+import Heading2 from '@/app/(components)/Texts/heading2';
+import Image from 'next/image';
 
 import * as Phaser from 'phaser';
 import { PhaserGame } from './(game)/PhaserGame';
@@ -12,11 +13,13 @@ import { PhaserGame } from './(game)/PhaserGame';
 export default function Suika()
 {
     // The sprite can only be moved in the MainMenu Scene
-    const [canMoveSprite, setCanMoveSprite] = useState(true);
+    const [gameStarted, setGameStarted] = useState(false);
     
     //  References to the PhaserGame component (game and scene are exposed)
     const phaserRef = useRef();
-    const [spritePosition, setSpritePosition] = useState({ x: 0, y: 0 });
+    const [score, setScore] = useState(0);
+    const [nextFruitIndex, setNextFruitIndex] = useState(-1);
+
 
     const changeScene = () => {
 
@@ -28,82 +31,71 @@ export default function Suika()
         }
     }
 
-    const moveSprite = () => {
-
-        const scene = phaserRef.current.scene;
-
-        if (scene && scene.scene.key === 'MainMenu')
-        {
-            // Get the update logo position
-            scene.moveLogo(({ x, y }) => {
-
-                setSpritePosition({ x, y });
-
-            });
-        }
-    }
-
-    const addSprite = () => {
-
-        const scene = phaserRef.current.scene;
-
-        if (scene)
-        {
-            // Add more stars
-            const x = Phaser.Math.Between(64, scene.scale.width - 64);
-            const y = Phaser.Math.Between(64, scene.scale.height - 64);
-
-            //  `add.sprite` is a Phaser GameObjectFactory method and it returns a Sprite Game Object instance
-            const star = scene.add.sprite(x, y, 'star');
-
-            //  ... which you can then act upon. Here we create a Phaser Tween to fade the star sprite in and out.
-            //  You could, of course, do this from within the Phaser Scene code, but this is just an example
-            //  showing that Phaser objects and systems can be acted upon from outside of Phaser itself.
-            scene.add.tween({
-                targets: star,
-                duration: 500 + Math.random() * 1000,
-                alpha: 0,
-                yoyo: true,
-                repeat: -1
-            });
-        }
-    }
-
     // Event emitted from the PhaserGame component
     const currentScene = (scene) => {
-
-        setCanMoveSprite(scene.scene.key !== 'MainMenu');
-        
+        setGameStarted(scene.scene.key === 'Game');
     }
 
+    const addScore = (addScore) => {
+        setScore(score + addScore)
+    }
 
-    // const PhaserGame = dynamic(() => import('./(game)/PhaserGame'), { ssr: false });
-      
+    const setNextFruit = (nextFruit) => {
+        setNextFruitIndex(nextFruit)
+    }
+
+    const FruitImage = ({ index }) => {
+        const images = [
+          '/suika/obj0.png',
+          '/suika/obj1.png',
+          '/suika/obj2.png',
+          '/suika/obj3.png',
+          '/suika/obj4.png',
+        ];
+        
+        if(index < 0) {
+            return ( 
+                <>
+                    <div className={styles.nextFruit_container}>
+                        <Heading2 className={styles.nextText}>NEXT</Heading2>
+                        <div className={styles.nextFruit_bg}></div>
+                    </div>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <div className={styles.nextFruit_container}>
+                        <Heading2 className={styles.nextText}>NEXT</Heading2>
+                        <div className={styles.nextFruit_bg}>
+                            <Image src={images[index]} alt={`Image ${index}`} width="75" height="75"/>
+                        </div>
+                    </div>
+                </>
+            )
+
+        }
+      };
+
 
     return (
         <div className={styles.app}>
             <div className={styles.section_container}>
-                <h1>SUIKA GAME</h1>
-                <Title>SUIKA GAME</Title>
-                <Button variant="primary" href="">Test</Button>
-                <Button variant="secondary" href="">Test</Button>
-                
+                <Heading1>SUIKA<br />GAME</Heading1>
+                <p>This is a quick web version of the fun little Japanese game called Suika game that I put together.</p> <br />
+                <p style={{paddingBottom: "1em"}}>Built on PhaserJS</p>
+                <Button style={{marginBottom: "0.5em"}} variant="primary" onClick={changeScene} disabled={gameStarted}>Start Game</Button>
+                <Button variant="secondary">How To Play</Button>
             </div>
-
-            <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
+            <PhaserGame ref={phaserRef} currentActiveScene={currentScene} score={addScore} nextFruitIndex={setNextFruit}/>
             <div className={styles.section_container}>
-                <div>
-                    <button className="button" onClick={changeScene}>Change Scene</button>
+                <div className={styles.score_container}>
+                    <Heading2 className={styles.scoreText}>SCORE<br/> </Heading2>
+                    <div className={styles.scoreNum}>
+                        <Heading2>{score}</Heading2>
+                    </div>
                 </div>
-                <div>
-                    <button disabled={canMoveSprite} className="button" onClick={moveSprite}>Toggle Movement</button>
-                </div>
-                <div className="spritePosition">Sprite Position:
-                    <pre>{`{\n  x: ${spritePosition.x}\n  y: ${spritePosition.y}\n}`}</pre>
-                </div>
-                <div>
-                    <button className="button" onClick={addSprite}>Add New Sprite</button>
-                </div>
+                <FruitImage index={nextFruitIndex}/>
             </div>
         </div>
     )
