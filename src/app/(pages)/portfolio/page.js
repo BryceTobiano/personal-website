@@ -15,6 +15,18 @@ export default function Portfolio() {
       </div>
       
       <Card 
+        title="SUIKA GAME" 
+        link="/suika"
+        image="/suika/thumbnail-suika.png"
+        date="December 15, 2024"
+        description={
+          <>
+            Recreated popular Japanese arcade game, Suika Game, in a web format using PhaserJS.
+          </>
+        }
+      />
+
+      <Card 
         title="A FULLY CUSTOM SYSTOLIC ARRAY LAYOUT" 
         link="/portfolio/systolic-array"
         image="/systolic-array/thumbnail-477.png"

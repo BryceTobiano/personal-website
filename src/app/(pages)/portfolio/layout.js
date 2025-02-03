@@ -2,7 +2,7 @@ import NavBar from "@/app/(components)/Nav/nav";
 import styles from "./portfolio.module.css";
 
 export const metadata = {
-  title: "Bryce Tobiano | Home" ,
+  title: "Bryce Tobiano | Suika Game" ,
   description: "Bryce Tobiano's Personal Website",
 };
 

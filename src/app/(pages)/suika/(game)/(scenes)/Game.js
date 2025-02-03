@@ -39,8 +39,7 @@ export class Game extends Scene
         EventBus.emit('fruit-dropped', nextFruit); // generate initial next fruit
         this.cursor = this.add.image(512, 200, fruitDroppable[currFruit]).setScale(fruitSizes[currFruit]);
         this.input.on('pointermove', () => {
-            // if(this.input.mousePointer.x > 40 && this.input.mousePointer.x < 1030 && !gameOver ) {
-            if(this.input.mousePointer.x > 10 && this.input.mousePointer.x < 1080 && !gameOver ) {
+            if(this.input.mousePointer.x > 40 && this.input.mousePointer.x < 1030 && !gameOver ) {
                 this.cursor.setPosition(this.input.mousePointer.x, 200);
             }
         });
