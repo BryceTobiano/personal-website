@@ -1,5 +1,5 @@
 import styles from "./portfolio.module.css";
-import Card from "@/app/(components)/card";
+import Card from "@/app/(components)/Card/card";
 
 export const metadata = {
   title: 'Bryce Tobiano | Portfolio',
@@ -11,12 +11,14 @@ export default function Portfolio() {
     <>
       <div className={styles.titleContainer}>
         <p className={styles.titleText}>PORTFOLIO</p>
-        <p> A list of things I have done or am currently working on</p>
+        <p className={styles.descriptionText}> A list of things I have done or am currently working on</p>
       </div>
       
       <Card 
         title="A FULLY CUSTOM SYSTOLIC ARRAY LAYOUT" 
         link="/portfolio/systolic-array"
+        image="/systolic-array/thumbnail-477.png"
+        date="December 15, 2024"
         description={
           <>
             Creating a <b>full custom layout design</b> for a systolic array, a unit
@@ -30,13 +32,27 @@ export default function Portfolio() {
       <Card 
         title="RUNNING A CONVOLUTIONAL NEURAL NETWORK ON AN FPGA" 
         link="/portfolio/CNN-on-FPGA"
-        description="Training and testing a neural network to identify handwritten digits using the MNIST dataset. Utilizing features such as RS232 communication "
-        
+        image="/thumbnail-cnn.png"
+        date="December 15, 2024"
+        description={
+          <>
+           Training and testing a neural network to identify handwritten digits using the MNIST dataset. 
+           Utilizing features such as RS232 communication and NiosII Soft CPU simulation. 
+          </>
+        }
       />
       <Card 
         title="FIRING FRENZY" 
         link="/portfolio/firing-frenzy"
-        description="Building a fun shooter game on FPGA"
+        image="/thumbnail-frenzy.png"
+        date="April 23, 2024"
+        description={
+          <>
+            For EE 354: Introduction to Digital Circuits, 
+            my lab partner and I solidified our fundamentals in Verilog by building an aiming practice game 
+            using the Nexys 4 and its built-in Analog ADXL362 accelerometer
+          </>
+        }
       />
     </>
   );

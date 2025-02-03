@@ -30,4 +30,10 @@
   font-family: Inter;
   font-weight: 900;
   font-size: 3em;
+  padding-bottom: 0.35em;
+}
+
+.descriptionText {
+  text-align: center;
+  line-height: 1em;
 }

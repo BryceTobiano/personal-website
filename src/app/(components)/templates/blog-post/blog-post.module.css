@@ -1,5 +1,5 @@
 .title {
-    font-family: var(--font-geist-mono);
+    font-family: var(--font-geist-mono), 'Courier New', Courier, monospace;;
     font-weight: 900;
     font-size: 3em;
     line-height: 1em;
