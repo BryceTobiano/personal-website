@@ -20,11 +20,21 @@
     gap: 5px;
 }
 
+.button:disabled {
+    background: var(--light-gray);
+    border-color: transparent;
+}
+
 .primary {
     background: var(--foreground);
     color: var(--background);
     gap: 8px;
     text-decoration: none;
+}
+
+.primary:disabled {
+    background: var(--light-gray);
+    border-color: transparent;
 }
 
 .secondary {
@@ -34,10 +44,20 @@
     text-decoration: none;
 }
 
+.secondary:disabled {
+    background: var(--light-gray);
+    border-color: transparent;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
     .primary:hover {
         background: var(--accent-hover);
+        border-color: transparent;
+    }
+    
+    .primary:hover:disabled {
+        background: var(--light-gray);
         border-color: transparent;
     }
 
@@ -46,6 +66,12 @@
         background: var(--accent-hover);
         border-color: transparent;
     }
+
+    .secondary:hover:disabled {
+        background: var(--light-gray);
+        border-color: transparent;
+    }
+
 
     .footer :hover {
         text-decoration: underline;

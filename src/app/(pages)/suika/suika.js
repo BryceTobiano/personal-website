@@ -85,7 +85,7 @@ export default function Suika()
                 <p>This is a quick web version of the fun little Japanese game called Suika game that I put together.</p> <br />
                 <p style={{paddingBottom: "1em"}}>Built on PhaserJS</p>
                 <Button style={{marginBottom: "0.5em"}} variant="primary" onClick={changeScene} disabled={gameStarted}>Start Game</Button>
-                <Button variant="secondary">How To Play</Button>
+                {/* <Button variant="secondary">How To Play</Button> */}
             </div>
             <PhaserGame ref={phaserRef} currentActiveScene={currentScene} score={addScore} nextFruitIndex={setNextFruit}/>
             <div className={styles.section_container}>
