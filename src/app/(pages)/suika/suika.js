@@ -4,6 +4,7 @@ import styles from "./suika.module.css";
 import Button from "@/app/(components)/Button/button"
 import Heading1 from '@/app/(components)/Texts/heading1';
 import Heading2 from '@/app/(components)/Texts/heading2';
+import Heading3 from '@/app/(components)/Texts/heading3';
 import Image from 'next/image';
 
 import * as Phaser from 'phaser';
@@ -76,7 +77,30 @@ export default function Suika()
             )
 
         }
-      };
+    };
+
+    const FruitImageMobile = ({ index }) => {
+        const images = [
+          '/suika/obj0.png',
+          '/suika/obj1.png',
+          '/suika/obj2.png',
+          '/suika/obj3.png',
+          '/suika/obj4.png',
+        ];
+        
+
+        return (
+            <>
+                <div className={styles.mobile_nextFruit}>
+                    <Heading3>NEXT</Heading3>
+                    <div className={styles.mobile_nextFruit_bg}>
+                        <Image src={images[index]} alt={`Image ${index}`} width="50" height="50"/>
+                    </div>
+                </div>
+            </>
+        )
+
+    };
 
 
     return (
@@ -98,9 +122,23 @@ export default function Suika()
                 </div>
                 <FruitImage index={nextFruitIndex}/>
             </div>
-            <div className={styles.mobile_container}>
+            
+            {/* MOBILE UI */}
+            <div className={styles.mobile_menu}>
                 {isVisible && (
-                    <Button style={{marginBottom: "0.5em"}} variant="secondary" onClick={changeScene} disabled={gameStarted}>Start Game</Button>
+                    <Button style={{borderColor: "black" }} variant="primary" onClick={changeScene} disabled={gameStarted}>Start Game</Button>
+                )}
+            </div>
+            <div className={styles.mobile_gameUI}>
+                {gameStarted && (
+                    <div  className={styles.mobile_scoreContainer}> 
+                        <Heading3>SCORE<br/></Heading3>
+                        <Heading2 className={styles.mobile_scoreNum}>{score}</Heading2>
+                    </div>
+
+                )}
+                {gameStarted && (
+                    <FruitImageMobile index={nextFruitIndex}/>
                 )}
             </div>
         </div>

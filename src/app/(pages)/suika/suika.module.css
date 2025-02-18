@@ -69,12 +69,55 @@
         display:none;
     }
 
-    .mobile_container {
+
+    .mobile_menu {
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 50%;
+        top: 35%;
         width: 100%;
     }
+
+    .mobile_scoreContainer {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .mobile_scoreNum {
+        background-color: rgba(217,217,217,0.5);
+        border-radius: 5px;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        width: 100px;
+    }
+
+    .mobile_nextFruit {
+        position: absolute;
+        bottom: 2%;
+        left: 5%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile_nextFruit_bg { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(217,217,217,0.5);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
 }

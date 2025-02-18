@@ -24,14 +24,13 @@ export class Game extends Scene
             label: 'overlapArea'
           });
           
-
-
+        // Bottom rectangle for friction
         this.matter.add.rectangle(0, 2160, 2160, 50, {
             isStatic: true, // Ensure the area does not move
             friction: 1.5, // Increases resistance to movement
             frictionStatic: 1.5 // Increases resistance when at rest
           });
-
+  
         let currFruit = Math.floor(Math.random() * fruitDroppable.length);
         let nextFruit = Math.floor(Math.random() * fruitDroppable.length);
         let gameOver = 0;
@@ -47,18 +46,18 @@ export class Game extends Scene
         EventBus.emit('fruit-dropped', nextFruit); // generate initial next fruit
         this.cursor = this.add.image(512, 200, fruitDroppable[currFruit]).setScale(fruitSizes[currFruit]);
         this.input.on('pointermove', () => {
-            if(this.input.mousePointer.x > 40 && this.input.mousePointer.x < 1030 && !gameOver ) {
-                this.cursor.setPosition(this.input.mousePointer.x, 200);
+            if(this.input.activePointer.x > 40 && this.input.activePointer.x < 1030 && !gameOver ) {
+                this.cursor.setPosition(this.input.activePointer.x, 200);
             }
         });
 
-
         let lastDropped = -1;
         // Drop on click
-        this.input.on('pointerdown', () => {
+        this.input.on('pointerup', (e) => {
+            console.log(e.x);
             const now = new Date; 
             if((now.getTime() - lastDropped) > 700 && !gameOver) { // Prevent spam clicking, only drop fruit if last clicked fruit is now
-                this.matter.add.image(this.input.mousePointer.x-10, 200, fruitDroppable[currFruit], "", { shape: fruitShapes[currFruit] })
+                this.matter.add.image(e.x-10, 200, fruitDroppable[currFruit], "", { shape: fruitShapes[currFruit] })
                     .setScale(fruitSizes[currFruit])
                     .setFriction(1.5, 0, 2)
                     .setData('customId', customId);
@@ -102,7 +101,6 @@ export class Game extends Scene
     {
         this.scene.start('GameOver');
     }
-
 
     combineObjects(bodyA, bodyB) {
         let avgPosX = (bodyA.position.x + bodyB.position.x)/2.0;

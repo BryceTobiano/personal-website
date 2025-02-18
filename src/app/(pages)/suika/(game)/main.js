@@ -14,7 +14,8 @@ const config = {
         mode: Phaser.Scale.FIT, // Scale the game to fit the screen
         width: 1080,
         height: 1920, 
-        autoCenter: Phaser.Scale.CENTER_BOTH, // Center the game in the screen
+        // autoCenter: Phaser.Scale.CENTER_BOTH, // Center the game in the screen
+        autoCenter: Phaser.Scale.CENTER_HORIZONTALLY, // Center the game in the screen
     },
     scene: [
         Boot,
