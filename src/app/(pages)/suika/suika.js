@@ -14,6 +14,7 @@ export default function Suika()
 {
     // The sprite can only be moved in the MainMenu Scene
     const [gameStarted, setGameStarted] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
     
     //  References to the PhaserGame component (game and scene are exposed)
     const phaserRef = useRef();
@@ -22,7 +23,7 @@ export default function Suika()
 
 
     const changeScene = () => {
-
+        setIsVisible(false);
         const scene = phaserRef.current.scene;
 
         if (scene)
@@ -96,6 +97,11 @@ export default function Suika()
                     </div>
                 </div>
                 <FruitImage index={nextFruitIndex}/>
+            </div>
+            <div className={styles.mobile_container}>
+                {isVisible && (
+                    <Button style={{marginBottom: "0.5em"}} variant="secondary" onClick={changeScene} disabled={gameStarted}>Start Game</Button>
+                )}
             </div>
         </div>
     )

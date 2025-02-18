@@ -7,6 +7,7 @@
 
 .heading {
     font-weight: 900;
+    text-decoration: underline;
 }
 
 .block {
@@ -18,4 +19,3 @@
 .block li {
     margin-top: 10px;
 }
-

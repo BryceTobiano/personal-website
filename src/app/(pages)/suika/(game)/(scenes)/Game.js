@@ -24,6 +24,14 @@ export class Game extends Scene
             label: 'overlapArea'
           });
           
+
+
+        this.matter.add.rectangle(0, 2160, 2160, 50, {
+            isStatic: true, // Ensure the area does not move
+            friction: 1.5, // Increases resistance to movement
+            frictionStatic: 1.5 // Increases resistance when at rest
+          });
+
         let currFruit = Math.floor(Math.random() * fruitDroppable.length);
         let nextFruit = Math.floor(Math.random() * fruitDroppable.length);
         let gameOver = 0;
@@ -52,7 +60,7 @@ export class Game extends Scene
             if((now.getTime() - lastDropped) > 700 && !gameOver) { // Prevent spam clicking, only drop fruit if last clicked fruit is now
                 this.matter.add.image(this.input.mousePointer.x-10, 200, fruitDroppable[currFruit], "", { shape: fruitShapes[currFruit] })
                     .setScale(fruitSizes[currFruit])
-                    .setFriction(0.5,0.00,0.2)
+                    .setFriction(1.5, 0, 2)
                     .setData('customId', customId);
                 customId++;
                     
