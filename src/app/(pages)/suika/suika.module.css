@@ -69,48 +69,85 @@
         display:none;
     }
 
-
     .mobile_menu {
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 35%;
+        top: 45%;
         width: 100%;
     }
 
     .mobile_scoreContainer {
+        color: white;
+        pointer-events: none;
+
         position: absolute;
-        bottom: 5%;
+        top: 5%;
         right: 5%;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
 
+    .mobile_scoreText {
+        margin-bottom: 1rem;
+        text-shadow: 0px 1px 1px black;
+        -webkit-text-stroke: 2px black;
+        text-stroke: 2px black;
+        paint-order: stroke fill;
+        z-index: 1;
     }
 
     .mobile_scoreNum {
-        background-color: rgba(217,217,217,0.5);
+        background-color: rgba(217, 217, 217, 0.5);
         border-radius: 5px;
         padding: 0.5rem;
         display: flex;
         justify-content: center;
         width: 100px;
+        position: absolute;
+        margin-top: 1em;
+
+        text-shadow: 0px 2px 2px black;
+        -webkit-text-stroke: 2px black;
+        text-stroke: 2px black;
+        paint-order: stroke fill;
     }
 
+
+
     .mobile_nextFruit {
+        color: white;
+        pointer-events: none;
+
         position: absolute;
-        bottom: 2%;
+        top: 2%;
         left: 5%;
+        line-height: 0.5em;
+        margin-bottom: 1em;
 
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    .mobile_nextText {
+        margin-bottom: 1rem;
+        text-shadow: 0px 1px 1px black;
+        -webkit-text-stroke: 2px black;
+        text-stroke: 2px black;
+        paint-order: stroke fill;
+        z-index: 1;
+    }
+
     .mobile_nextFruit_bg { 
+        position: absolute;
+        margin-top: 1rem;
+        z-index: 0;
+
         display: flex;
         align-items: center;
         justify-content: center;

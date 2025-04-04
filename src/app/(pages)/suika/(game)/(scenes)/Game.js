@@ -54,7 +54,6 @@ export class Game extends Scene
         let lastDropped = -1;
         // Drop on click
         this.input.on('pointerup', (e) => {
-            console.log(e.x);
             const now = new Date; 
             if((now.getTime() - lastDropped) > 700 && !gameOver) { // Prevent spam clicking, only drop fruit if last clicked fruit is now
                 this.matter.add.image(e.x-10, 200, fruitDroppable[currFruit], "", { shape: fruitShapes[currFruit] })

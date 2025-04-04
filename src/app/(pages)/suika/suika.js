@@ -92,7 +92,7 @@ export default function Suika()
         return (
             <>
                 <div className={styles.mobile_nextFruit}>
-                    <Heading3>NEXT</Heading3>
+                    <Heading3 classname={styles.mobile_nextText}>NEXT</Heading3>
                     <div className={styles.mobile_nextFruit_bg}>
                         <Image src={images[index]} alt={`Image ${index}`} width="50" height="50"/>
                     </div>
@@ -132,7 +132,7 @@ export default function Suika()
             <div className={styles.mobile_gameUI}>
                 {gameStarted && (
                     <div  className={styles.mobile_scoreContainer}> 
-                        <Heading3>SCORE<br/></Heading3>
+                        <Heading3 className={styles.mobile_scoreText}>SCORE<br/></Heading3>
                         <Heading2 className={styles.mobile_scoreNum}>{score}</Heading2>
                     </div>
 

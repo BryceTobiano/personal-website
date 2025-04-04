@@ -28,7 +28,7 @@ export default function Portfolio() {
 
       <Card 
         title="A FULLY CUSTOM SYSTOLIC ARRAY LAYOUT" 
-        link="/portfolio/systolic-array"
+        link="/systolic-array"
         image="/systolic-array/thumbnail-477.png"
         date="December 15, 2024"
         description={
@@ -43,7 +43,7 @@ export default function Portfolio() {
       />
       <Card 
         title="RUNNING A CONVOLUTIONAL NEURAL NETWORK ON AN FPGA" 
-        link="/portfolio/CNN-on-FPGA"
+        link="/CNN-on-FPGA"
         image="/thumbnail-cnn.png"
         date="December 15, 2024"
         description={
@@ -55,7 +55,7 @@ export default function Portfolio() {
       />
       <Card 
         title="FIRING FRENZY" 
-        link="/portfolio/firing-frenzy"
+        link="/firing-frenzy"
         image="/thumbnail-frenzy.png"
         date="April 23, 2024"
         description={
