@@ -5,17 +5,16 @@
     line-height: 1em;
 }
 
-.heading {
-    font-weight: 900;
-    text-decoration: underline;
-}
-
 .block {
     border-left: 7px solid var(--accent);
     background: var(--light-gray);
     padding: 1em 1em 1em 2em;
+
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0%;
 }
 
-.block li {
-    margin-top: 10px;
-}
+

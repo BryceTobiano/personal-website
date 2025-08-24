@@ -2,9 +2,7 @@
 import { useRef, useState } from 'react';
 import styles from "./suika.module.css";
 import Button from "@/app/(components)/Button/button"
-import Heading1 from '@/app/(components)/Texts/heading1';
-import Heading2 from '@/app/(components)/Texts/heading2';
-import Heading3 from '@/app/(components)/Texts/heading3';
+import { TitleMono, Heading2, Heading3 } from "@/app/(components)/Texts/texts";
 import Image from 'next/image';
 
 import * as Phaser from 'phaser';
@@ -106,7 +104,7 @@ export default function Suika()
     return (
         <div className={styles.app}>
             <div className={styles.section_container}>
-                <Heading1>SUIKA<br />GAME</Heading1>
+                <TitleMono>SUIKA<br />GAME</TitleMono>
                 <p>This is a quick web version of the fun little Japanese game called Suika game that I put together.</p> <br />
                 <p style={{paddingBottom: "1em"}}>Built on PhaserJS</p>
                 <Button style={{marginBottom: "0.5em"}} variant="primary" onClick={changeScene} disabled={gameStarted}>Start Game</Button>

@@ -33,7 +33,7 @@ export default function Portfolio() {
         date="December 15, 2024"
         description={
           <>
-            Creating a <b>full custom layout design</b> for a systolic array, a unit
+            Creating a full custom layout design for a systolic array, a unit
             handling high computational demands in tasks like deep learning and
             matrix multiplication. 
             Optimizing for area, power consumption, and

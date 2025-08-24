@@ -16,7 +16,7 @@ export default function Home() {
           <p>I&apos;m a tinkerer and engineer with interests in Embedded Software, Web Development, and more. 
           Currently, I am at <b className={styles.uline}>USC</b> ✌️ studying <b className={styles.uline}>Computer Engineering and Computer Science (CECS)</b>.</p>
           <p>
-            When I&apos;m not working you can find me cooking, practicing for the&nbsp;
+            When I&apos;m not working you can find me bowling, practicing for the&nbsp;
             <Link href="https://www.usctrojanesports.com/teams/tetris" target="_blank" 
             rel="noopener noreferrer">
               <b className={styles.uline}>
