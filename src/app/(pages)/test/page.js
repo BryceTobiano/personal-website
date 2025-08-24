@@ -1,11 +1,6 @@
 import Card from "@/app/(components)/Card/card";
-import Title from "@/app/(components)/Texts/title";
-import Heading1 from "@/app/(components)/Texts/heading1";
-import Heading2 from "@/app/(components)/Texts/heading2";
-import Heading3 from "@/app/(components)/Texts/heading3";
-import Subheading from "@/app/(components)/Texts/subheading";
-import Text from "@/app/(components)/Texts/text";
-import TitleMono from "@/app/(components)/Texts/titlemono";
+import { Title, TitleMono, Heading1, Heading2, Subheading, Text} from "@/app/(components)/Texts/texts";
+
 export const metadata = {
   title: 'Bryce Tobiano | Test',
   description: 'Some things I have done!'
