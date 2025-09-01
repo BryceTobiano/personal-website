@@ -150,7 +150,7 @@ export const StyledLink = ({ className, children, style, href}) => {
         fontWeight: "normal",
         fontFamily: "Inter",
         fontSize: "18px",
-        fontStyle: "italic",
+        // fontStyle: "italic",
         textDecoration: "underline",
         lineHeight: "100%",
         letterSpacing: "0",

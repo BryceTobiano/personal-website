@@ -13,7 +13,7 @@ export default function Home() {
         
         <div className={styles.ptext}>
           Hi! My name is Bryce. 
-          <p>I&apos;m a tinkerer and engineer with interests in Embedded Software, Web Development, and more. 
+          <p>I&apos;m a tinkerer and engineer with interests in Semiconductors, Web Development, and more. 
           Currently, I am at <b className={styles.uline}>USC</b> ✌️ studying <b className={styles.uline}>Computer Engineering and Computer Science (CECS)</b>.</p>
           <p>
             When I&apos;m not working you can find me bowling, practicing for the&nbsp;
@@ -28,12 +28,12 @@ export default function Home() {
 
         <div className={styles.ctas}>
           <Link 
-            href="/BryceTobianoResume.pdf" 
+            href="/about" 
             rel="noopener noreferrer"
             className={styles.primary}
           >
             <StarFilledIcon/>
-            <span>Resume</span>
+            <span>About</span>
           </Link>
           <Link 
             href="/portfolio" 
